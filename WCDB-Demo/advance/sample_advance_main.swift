@@ -34,10 +34,10 @@ func sample_advance_main(baseDirectory: String) {
     })
 
     //cipher
-    do {
-        let key: Data = "password".data(using: .ascii)!
-        database.setCipher(key: key)
-    }
+//    do {
+//        let key: Data = "password".data(using: .ascii)!
+//        database.setCipher(key: key)
+//    }
 
     //prepare
     do {

@@ -24,11 +24,20 @@ import WCDBSwift
 class SampleTable: TableCodable {
     var intValue: Int?
     var stringValue: String?
+    var createDate: Date?
+    var occupantsIds:[Int64]?
     enum CodingKeys: String, CodingTableKey {
         typealias Root = SampleTable
         static let objectRelationalMapping = TableBinding(CodingKeys.self)
 
         case intValue
         case stringValue
+        case createDate
+        case occupantsIds
+        static var columnConstraintBindings: [SampleTable.CodingKeys : ColumnConstraintBinding]? {
+            return [stringValue:ColumnConstraintBinding( defaultTo: "I am default"),createDate:ColumnConstraintBinding( orderBy: .descending)]
+        }
     }
+
+    var isAutoIncrement: Bool = false // 用于定义是否使用自增的方式插入
 }

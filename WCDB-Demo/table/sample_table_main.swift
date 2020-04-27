@@ -29,9 +29,11 @@ func sample_table_main(baseDirectory: String) {
     let tableName = className
 
     let database = Database(withPath: path)
+
 //    database.close(onClosed: {
 //        try? database.removeFiles()
 //    })
+    
 
     //Create table and indexes from WCTTableCoding class
     do {
@@ -88,10 +90,65 @@ func sample_table_main(baseDirectory: String) {
         //Get table
         let table: Table<SampleTable>? = try database.getTable(named: tableName)
         //Insert/Update/Select/Delete using table
-        let object = SampleTable()
-        object.intValue = 123456
-        object.stringValue = "stringValue"
-        try table?.insert(objects: object)
+        
+
+       
+        //当个插入
+//        let object = SampleTable()
+//        object.intValue = 12131312
+//        object.stringValue = "\(100 + 12131312)"
+//        object.createDate = Date().addingTimeInterval(TimeInterval(12131312))
+//        object.occupantsIds = [13,12]
+//        try table?.insert(objects: object)
+        
+        // 批量插入
+        //        var arrobject = [SampleTable]()
+        //        for (index,item) in (0..<100).enumerated() {
+        //            let object = SampleTable()
+        //            object.intValue = Int(index)
+        //            object.stringValue = "\(100 + index)"
+        //            object.createDate = Date().addingTimeInterval(TimeInterval(index))
+        //            arrobject.append(object)
+        //        }
+        
+//        try database.run(transaction: {
+//            try database.insert(objects: arrobject, intoTable: tableName)
+//        })
+        
+        
+        // 删除
+        // 删除 sampleTable 中 identifier 降序排列后的前 2 行数据
+        
+        // 更新
+//        let updateObj = SampleTable()
+//        updateObj.stringValue = "Hello world"
+//        try table?.update(on: SampleTable.Properties.stringValue, with: updateObj,where:SampleTable.Properties.intValue > 1 &&  SampleTable.Properties.intValue < 10)
+        
+        
+//        // 获取所有内容
+//        let allRows = try database.getRows(fromTable: tableName)
+//        print(allRows[row: 3, column: 0].int32Value)
+        
+        
+        // 返回 sampleTable 中的所有数据
+        let allObjects: [SampleTable] = try database.getObjects(fromTable: tableName)
+        let occupantsIds = allObjects[0].occupantsIds
+        print(occupantsIds?[0])
+//
+//
+//        // 获取第二行
+//        let secondRow = try database.getRow(fromTable: tableName, offset: 1)
+//        print(secondRow[0].int32Value)
+//
+//
+//        // 获取不重复的 description 列的值
+//        let distinctDescriptionColumn = try database.getDistinctValue(on: SampleTable.Properties.createDate, fromTable: tableName)
+//        print(distinctDescriptionColumn.stringValue) //
+//
+//
+//        let maxIdentifier = try database.getValue(on: SampleTable.Properties.intValue.max(), fromTable: tableName)
+//        print(maxIdentifier.int32Value) //
+    
     } catch let error {
         print("get table error: \(error)")
     }
