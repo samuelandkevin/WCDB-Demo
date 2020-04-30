@@ -95,11 +95,20 @@ func sample_table_main(baseDirectory: String) {
        
         //当个插入
 //        let object = SampleTable()
-//        object.intValue = 12131312
+//        object.intValue = 123232
 //        object.stringValue = "\(100 + 12131312)"
 //        object.createDate = Date().addingTimeInterval(TimeInterval(12131312))
 //        object.occupantsIds = [13,12]
 //        try table?.insert(objects: object)
+        
+        //插入更新
+//        let object = SampleTable()
+//        object.intValue = 123232
+//        object.stringValue = "\(100 + 12131312)"
+//        object.createDate = Date().addingTimeInterval(TimeInterval(12131312))
+//        object.occupantsIds = [13,12]
+//        try database.insertOrReplace(objects: object, intoTable: tableName) // 插入成功，且 description 的内容会被替换为 "insertOrReplace"
+
         
         // 批量插入
         //        var arrobject = [SampleTable]()
@@ -119,9 +128,27 @@ func sample_table_main(baseDirectory: String) {
         // 删除
         // 删除 sampleTable 中 identifier 降序排列后的前 2 行数据
         
+
         // 更新
-//        let updateObj = SampleTable()
-//        updateObj.stringValue = "Hello world"
+        let updateObj = SampleTable()
+        updateObj.id = "888"
+        updateObj.name = "jhof"
+        updateObj.lastMessageId = "1234567890"
+        
+        //成功 insertOrReplace
+        do {
+            try table?.delete(where: SampleTable.Properties.id == "777")
+            try table?.insertOrReplace(objects: updateObj)
+//            try table?.insertOrReplace(objects: updateObj)
+//            try table?.insertOrReplace(objects: updateObj)
+        }catch let error{
+            print(error)
+        }
+        
+         
+        //
+        
+        
 //        try table?.update(on: SampleTable.Properties.stringValue, with: updateObj,where:SampleTable.Properties.intValue > 1 &&  SampleTable.Properties.intValue < 10)
         
         
@@ -130,10 +157,13 @@ func sample_table_main(baseDirectory: String) {
 //        print(allRows[row: 3, column: 0].int32Value)
         
         
+        
+        
+        
         // 返回 sampleTable 中的所有数据
-        let allObjects: [SampleTable] = try database.getObjects(fromTable: tableName)
-        let occupantsIds = allObjects[0].occupantsIds
-        print(occupantsIds?[0])
+//        let allObjects: [SampleTable] = try database.getObjects(fromTable: tableName)
+//        let occupantsIds = allObjects[0].occupantsIds
+//        print(occupantsIds?[0])
 //
 //
 //        // 获取第二行
