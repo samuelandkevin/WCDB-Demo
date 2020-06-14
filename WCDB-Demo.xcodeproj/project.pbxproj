@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8EA6971C0B9F9CDD7C6EB719 /* Pods_WCDB_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48FACFA825E554E897A80A8 /* Pods_WCDB_Demo.framework */; };
+		A2166B9E24951D6D00955956 /* EHProviderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2166B9D24951D6D00955956 /* EHProviderModel.swift */; };
+		A2166BA024951DDE00955956 /* EHBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2166B9F24951DDE00955956 /* EHBaseModel.swift */; };
+		A2166BA2249520EF00955956 /* Test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2166BA1249520EF00955956 /* Test1.swift */; };
+		A2166BA6249614CC00955956 /* EHDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2166BA5249614CC00955956 /* EHDBManager.swift */; };
+		A2166BA8249616BB00955956 /* EHDBTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2166BA7249616BB00955956 /* EHDBTable.swift */; };
 		A27DFD63244CA04E0040F461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27DFD62244CA04E0040F461 /* AppDelegate.swift */; };
 		A27DFD65244CA04E0040F461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27DFD64244CA04E0040F461 /* SceneDelegate.swift */; };
 		A27DFD67244CA04E0040F461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27DFD66244CA04E0040F461 /* ViewController.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2166B9D24951D6D00955956 /* EHProviderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHProviderModel.swift; sourceTree = "<group>"; };
+		A2166B9F24951DDE00955956 /* EHBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHBaseModel.swift; sourceTree = "<group>"; };
+		A2166BA1249520EF00955956 /* Test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1.swift; sourceTree = "<group>"; };
+		A2166BA5249614CC00955956 /* EHDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHDBManager.swift; sourceTree = "<group>"; };
+		A2166BA7249616BB00955956 /* EHDBTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EHDBTable.swift; sourceTree = "<group>"; };
 		A27DFD5F244CA04E0040F461 /* WCDB-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WCDB-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27DFD62244CA04E0040F461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27DFD64244CA04E0040F461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +160,11 @@
 				A2E9F3CE24555BE3008F8F2F /* table */,
 				A2E9F3BB24555BE3008F8F2F /* transaction */,
 				A27DFD62244CA04E0040F461 /* AppDelegate.swift */,
+				A2166BA1249520EF00955956 /* Test1.swift */,
+				A2166B9D24951D6D00955956 /* EHProviderModel.swift */,
+				A2166BA5249614CC00955956 /* EHDBManager.swift */,
+				A2166BA7249616BB00955956 /* EHDBTable.swift */,
+				A2166B9F24951DDE00955956 /* EHBaseModel.swift */,
 				A27DFD64244CA04E0040F461 /* SceneDelegate.swift */,
 				A27DFD66244CA04E0040F461 /* ViewController.swift */,
 				A27DFD68244CA04E0040F461 /* Main.storyboard */,
@@ -391,12 +406,17 @@
 				A2E9F3FC24555BE3008F8F2F /* sample_statistics_main.swift in Sources */,
 				A2E9F3F724555BE3008F8F2F /* SampleORM.swift in Sources */,
 				A2E9F3E924555BE3008F8F2F /* sample_core_main.swift in Sources */,
+				A2166BA8249616BB00955956 /* EHDBTable.swift in Sources */,
 				A2E9F3F924555BE3008F8F2F /* SampleORMIndex.swift in Sources */,
 				A2E9F3E024555BE3008F8F2F /* SampleRepair.swift in Sources */,
 				A2E9F3E224555BE3008F8F2F /* sample_transaction_main.swift in Sources */,
 				A2E9F3F024555BE3008F8F2F /* SampleTable.swift in Sources */,
+				A2166B9E24951D6D00955956 /* EHProviderModel.swift in Sources */,
 				A2E9F3F224555BE3008F8F2F /* sample_chaincall_main.swift in Sources */,
 				A2E9F3EF24555BE3008F8F2F /* SampleAdvanceMulti.swift in Sources */,
+				A2166BA2249520EF00955956 /* Test1.swift in Sources */,
+				A2166BA6249614CC00955956 /* EHDBManager.swift in Sources */,
+				A2166BA024951DDE00955956 /* EHBaseModel.swift in Sources */,
 				A2E9F3EE24555BE3008F8F2F /* SampleAdvance.swift in Sources */,
 				A2E9F3FA24555BE3008F8F2F /* SampleORMColumnConstraint.swift in Sources */,
 				A2E9F3EB24555BE3008F8F2F /* sample_convenient_main.swift in Sources */,

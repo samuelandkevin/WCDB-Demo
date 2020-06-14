@@ -15,13 +15,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        let machPath = CommandLine.arguments.first!
+//        let machPath = CommandLine.arguments.first!
        
 //        let baseDirectory = URL(fileURLWithPath: machPath).deletingLastPathComponent().appendingPathComponent("SampleDB").path
      
-        let baseDirectory = FileManager.default.urls(for: .documentDirectory,
-            in: .userDomainMask).last!.appendingPathComponent("EasyAtHome").path
-        print("Base Directory: \(baseDirectory)")
+//        let baseDirectory = FileManager.default.urls(for: .documentDirectory,
+//            in: .userDomainMask).last!.appendingPathComponent("EasyAtHome").path
+//        print("Base Directory: \(baseDirectory)")
 //        sample_orm_main(baseDirectory: baseDirectory)
 //        sample_chailcall_main(baseDirectory: baseDirectory)
 //        sample_convenient_main(baseDirectory: baseDirectory)
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 //        sample_statistics_main(baseDirectory: baseDirectory)
 //        sample_fts_main(baseDirectory: baseDirectory)
         
-        sample_table_main(baseDirectory: baseDirectory)
+        test1()
     }
 
 

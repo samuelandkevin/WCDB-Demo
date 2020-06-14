@@ -107,29 +107,31 @@ class SampleTable : TableCodable {
     var unreadMessagesCount:Int32?
 
     enum CodingKeys: String, CodingTableKey {
-             typealias Root = SampleTable
-             static let objectRelationalMapping = TableBinding(CodingKeys.self)
-             
-                case name
-                case type
-                case id
-                case createdAt
-                case lastMessageDate
-                case lastMessageDateSent
-                case lastMessageId
-                case lastMessageUserId
-                case occupantsIds
-                case updatedAt
-                case userId
-                case unreadMessagesCount
-
-         }
-    
-    static var columnConstraintBindings: [CodingKeys: ColumnConstraintBinding]? {
-        return [
-            .id: ColumnConstraintBinding(isPrimary: true),
-        ]
+        typealias Root = SampleTable
+        static let objectRelationalMapping = TableBinding(CodingKeys.self)
+        
+        case name
+        case type
+        case id
+        case createdAt
+        case lastMessageDate
+        case lastMessageDateSent
+        case lastMessageId
+        case lastMessageUserId
+        case occupantsIds
+        case updatedAt
+        case userId
+        case unreadMessagesCount
+        
+        static var columnConstraintBindings: [CodingKeys: ColumnConstraintBinding]? {
+            return [
+                .id: ColumnConstraintBinding(isPrimary: true)
+            ]
+        }
+        
     }
+    
+   
 
   
 }

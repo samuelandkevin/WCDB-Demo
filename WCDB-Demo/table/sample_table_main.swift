@@ -131,7 +131,7 @@ func sample_table_main(baseDirectory: String) {
 
         // 更新
         let updateObj = SampleTable()
-        updateObj.id = "888"
+        updateObj.id = "1"
         updateObj.name = "jhof"
         updateObj.lastMessageId = "1234567890"
         

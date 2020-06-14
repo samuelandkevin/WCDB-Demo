@@ -4,6 +4,6 @@ target 'WCDB-Demo' do
     use_frameworks!
 
    pod 'WCDB.swift'
-
+   pod 'SwiftyJSON'
 end
 
